@@ -31,37 +31,106 @@
 </head>
 
 <body>
+    <!-- Header with Logo and Navigation -->
     <header>
-        <h1>Welcome to Trendy Quest</h1>
+        <div class="logo-container">
+            <img src="logo.png" alt="Trendy Quest Logo" class="logo">
+            <h1>Trendy Quest</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#trending-videos">Trending Videos</a></li>
                 <li><a href="#latest-news">Latest News</a></li>
+                <li><a href="#featured">Featured</a></li>
                 <li><a href="#about">About</a></li>
+                <li><input type="text" placeholder="Search..." class="search-bar"></li>
             </ul>
         </nav>
     </header>
 
-    <section id="trending-videos">
+    <!-- Hero Section with Featured Content -->
+    <section class="hero">
+        <h2>Catch the Hottest Viral Videos & Breaking News</h2>
+        <p>Your one-stop source for today's trending topics and viral moments.</p>
+        <button class="cta-button">Explore Now</button>
+    </section>
+
+    <!-- Featured Section with Highlighted Content -->
+    <section id="featured" class="featured-section">
+        <h2>Featured Stories</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="featured1.jpg" alt="Featured Story 1">
+                <h3>Top Viral Video of the Week</h3>
+                <p>Discover why this video is breaking the internet.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="featured-item">
+                <img src="featured2.jpg" alt="Featured Story 2">
+                <h3>Breaking News Alert</h3>
+                <p>The story everyone is talking about.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="featured-item">
+                <img src="featured3.jpg" alt="Featured Story 3">
+                <h3>Trending Challenge of the Month</h3>
+                <p>See what’s making waves on social media.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Videos Section with Video Previews -->
+    <section id="trending-videos" class="content-section">
         <h2>Trending Videos</h2>
-        <p>Catch the latest viral videos that are making waves across social media and beyond. Stay ahead with the top content now trending worldwide.</p>
-        <!-- Embed or link to trending videos here -->
+        <div class="video-grid">
+            <!-- Video item placeholders -->
+            <div class="video-item">
+                <img src="video1-thumbnail.jpg" alt="Video Thumbnail 1">
+                <h4>Video Title 1</h4>
+                <p>A brief description of the trending video.</p>
+            </div>
+            <div class="video-item">
+                <img src="video2-thumbnail.jpg" alt="Video Thumbnail 2">
+                <h4>Video Title 2</h4>
+                <p>A brief description of the trending video.</p>
+            </div>
+            <div class="video-item">
+                <img src="video3-thumbnail.jpg" alt="Video Thumbnail 3">
+                <h4>Video Title 3</h4>
+                <p>A brief description of the trending video.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="latest-news">
+    <!-- Latest News Section with Article Links -->
+    <section id="latest-news" class="content-section">
         <h2>Latest News</h2>
-        <p>Stay up-to-date with breaking news, viral moments, and trending stories. Be in the know with our daily updates and hot topics.</p>
-        <!-- Link to recent news articles or trending topics -->
+        <ul class="news-list">
+            <li><a href="#">Breaking News Story #1: Short Headline</a></li>
+            <li><a href="#">Breaking News Story #2: Short Headline</a></li>
+            <li><a href="#">Breaking News Story #3: Short Headline</a></li>
+            <li><a href="#">Breaking News Story #4: Short Headline</a></li>
+            <li><a href="#">Breaking News Story #5: Short Headline</a></li>
+        </ul>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <h2>About Trendy Quest</h2>
-        <p>Trendy Quest is your ultimate source for the latest viral content, breaking news, and trending videos. We bring you the most talked-about stories, viral moments, and the latest buzz from across the globe.</p>
+        <p>Trendy Quest is your ultimate source for the latest viral content, breaking news, and trending videos. Our team curates the hottest topics to keep you in the loop. Join us as we explore what’s trending across the globe.</p>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Trendy Quest. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+        <div class="social-links">
+            <a href="https://twitter.com/YourTwitterHandle">Twitter</a> |
+            <a href="https://facebook.com/YourFacebookPage">Facebook</a> |
+            <a href="https://instagram.com/YourInstagram">Instagram</a>
+        </div>
     </footer>
 </body>
+
 
 </html>
