@@ -27,6 +27,7 @@ header {
 }
 
 h1 {
+    font-family:sanserif;
     font-size: 2rem;
     font-weight: 700;
     color: white;
@@ -78,7 +79,7 @@ nav ul li a:hover {
 
 /* Hero Section Styling */
 .hero {
-    background: url('https://media.giphy.com/media/26FPt1H8ljjXMQHkA/giphy.gif') center center / cover no-repeat; /* Example GIF */
+    background: url('') center center / cover no-repeat; /* Example GIF */
     color: white;
     text-align: center;
     padding: 100px 20px;
