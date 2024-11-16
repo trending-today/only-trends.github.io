@@ -444,3 +444,190 @@ footer a:hover {
 #about, footer {
     animation: fadeInSection 1.5s ease-out;
 }
+
+/* General Mobile & Tablet Styling (Does not affect laptop styling) */
+
+/* Mobile and Tablet Styles */
+@media screen and (max-width: 768px) {
+    
+    /* Header Styling */
+    header {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .logo-container {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        width: 50px; /* Adjust logo size for mobile */
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Slightly smaller for mobile screens */
+    }
+
+    nav ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li input {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+    }
+
+    /* Featured Section */
+    .featured-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .featured-grid {
+        display: block;
+    }
+
+    .featured-item {
+        margin-bottom: 20px;
+    }
+
+    .featured-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .featured-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .featured-item p {
+        font-size: 1rem;
+    }
+
+    /* Trending Videos Section */
+    .video-grid {
+        display: block;
+    }
+
+    .video-item {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .video-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .video-item p {
+        font-size: 1rem;
+    }
+
+    /* Latest News Section */
+    .news-list {
+        padding-left: 0;
+    }
+
+    .news-list li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    /* About Section */
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 15px;
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+}
+
+/* Mobile First Design: For devices under 480px */
+@media screen and (max-width: 480px) {
+    /* Adjust text sizes even more for very small screens */
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .featured-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .featured-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .video-item h4 {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+}
+
