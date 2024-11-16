@@ -116,7 +116,7 @@ nav ul li a:hover {
 .hero {
    background: linear-gradient(#4e73df, #ff4081, #ff6f61, #9b59b6);
 /*url('') center center / cover no-repeat*/ /* Example GIF */
-    border: 3px solid rgb(66, 3, 124);
+    border: 3px solid #fff;
     color: white;
     text-align: center;
     padding: 100px 20px;
