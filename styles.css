@@ -29,6 +29,39 @@ header {
     object-fit: cover;
 }
 
+/* 3D Text Effect */
+.logo-text {
+    font-size: 5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #f6f7f8, #e6e7e8); /* Gradient effect */
+    -webkit-background-clip: text;
+    background-clip: text;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    animation: textAnimation 1.5s ease infinite alternate; /* Animation for 3D effect */
+}
+
+/* Animation for 3D Text */
+@keyframes textAnimation {
+    0% {
+        transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: perspective(200px) rotateX(15deg) rotateY(15deg);
+        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5), -6px -6px 12px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        transform: perspective(200px) rotateX(30deg) rotateY(30deg);
+        text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7), -8px -8px 16px rgba(0, 0, 0, 0.4);
+    }
+}
+
 h1 {
     font-family: sans-serif;
     font-size: 2rem;
