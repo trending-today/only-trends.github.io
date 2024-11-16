@@ -27,7 +27,7 @@ header {
 }
 
 h1 {
-    font-family:sanserif;
+    font-family:sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: white;
@@ -79,7 +79,7 @@ nav ul li a:hover {
 
 /* Hero Section Styling */
 .hero {
-    background: url('') center center / cover no-repeat; /* Example GIF */
+    background: linear-gradient(45deg, #ff4081, #ff6f61);  /*url('') center center / cover no-repeat*/ /* Example GIF */
     color: white;
     text-align: center;
     padding: 100px 20px;
