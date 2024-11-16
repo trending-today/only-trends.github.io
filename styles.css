@@ -115,7 +115,7 @@ nav ul li a:hover {
 
 /* Hero Section Styling */
 .hero {
-    background: blue;/*linear-gradient(45deg, #ff4081, #ff6f61)  /*url('') center center / cover no-repeat*/ /* Example GIF */
+    background: linear-gradient(45deg, #4e73df, #ff4081, #ff6f61, #9b59b6);/* blue /*url('') center center / cover no-repeat*/ /* Example GIF */
     color: white;
     text-align: center;
     padding: 100px 20px;
