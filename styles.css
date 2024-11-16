@@ -1,3 +1,6 @@
+body {
+    font-family: sans-serif;
+}
 /* General Header Styling */
 header {
     background: linear-gradient(45deg, #ff4081, #ff6f61); /* Instagram-inspired gradient */
