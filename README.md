@@ -20,4 +20,3 @@ Only Trends delivers high-quality, engaging content that’s constantly updated.
 Our site features today’s trending stories and viral content. Whether you’re a news enthusiast, social media aficionado, or simply curious, **Only Trends** offers something for everyone, connecting you to the topics people are talking about right now.
 
 Visit [**Only Trends**](https://trending-today.github.io/only-trends.github.io) today to explore what’s trending and stay informed with the latest stories and viral phenomena.
-
