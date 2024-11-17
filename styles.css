@@ -1,63 +1,86 @@
 body h1,h2,h3,p {
     font-family: sans-serif;
+    
 }
 /* General Header Styling */
 header {
-    background: linear-gradient(45deg, #ff4081, #ff6f61); /* Instagram-inspired gradient */
+    height: 170px;
+    background: linear-gradient(360deg, #5900ff,rgb(173, 27, 8), #e30bff, rgb(224, 34, 65), rgb(14, 94, 214)); /* Instagram-inspired gradient */
     color: white;
     padding: 20px 40px;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 0;
+    margin-top: -7.7px;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Container */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.box {
+	display: flex;
+    margin-left: -100px;
 }
 
-.logo {
-    height: 50px;
-    width: 50px;
-    border-radius: 5px;
-    object-fit: cover;
+.box .inner {
+	width: 250px;
+	height: 75px;
+	line-height: 70px;
+	font-size: 2em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
-/* 3D Text Effect */
-.logo-text {
-    font-size: 5rem; /* Adjust font size as needed */
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(135deg, #f6f7f8, #e6e7e8); /* Gradient effect */
-    -webkit-background-clip: text;
-    background-clip: text;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
-    animation: textAnimation 1.5s ease infinite alternate; /* Animation for 3D effect */
+
+
+.box .inner:first-child {
+	background: rgba(247, 148, 19, 0.308);
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
 }
 
-/* Animation for 3D Text */
-@keyframes textAnimation {
-    0% {
-        transform: perspective(200px) rotateX(0deg) rotateY(0deg);
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(0, 0, 0, 0.1);
+.box .inner:last-child {
+	background-color: rgba(247, 148, 19, 0.308);
+	color: antiquewhite;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 6s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 10ms;
+	left: 100%;
+    left: -100%;
+}
+
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+    .box .inner span {
+        font-size: 1.5rem;
+        display: block;
     }
-    50% {
-        transform: perspective(200px) rotateX(15deg) rotateY(15deg);
-        text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5), -6px -6px 12px rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        transform: perspective(200px) rotateX(30deg) rotateY(30deg);
-        text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.7), -8px -8px 16px rgba(0, 0, 0, 0.4);
+    .navbar-nav .nav-link {
+        font-size: 1rem;
     }
 }
 
@@ -74,20 +97,24 @@ h1 {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
+    margin-left: -130px;
 }
 
 nav ul li {
     display: inline;
+    
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    
 }
 
 nav ul li a:hover {
@@ -143,7 +170,7 @@ nav ul li a:hover {
 
 .cta-button {
     padding: 15px 30px;
-    background-color: #ff6f61; /* Instagram-inspired red */
+    background-color: #d261ff; /* Instagram-inspired red */
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
@@ -156,329 +183,4 @@ nav ul li a:hover {
 .cta-button:hover {
     background-color: #ff4081; /* Slightly brighter red for hover effect */
     transform: translateY(-3px); /* Adds slight movement for interactivity */
-}
-
-/* Add subtle animation when the section comes into view */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.hero {
-    animation: fadeIn 2s ease-out;
-}
-
-/* Featured Section Styling */
-.featured-section {
-    background-color: #f9f9f9; /* Light grayish background for contrast */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.featured-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff4081; /* Instagram-inspired pink */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.featured-item {
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 5px solid #ff4081; /* Instagram pink border under the image */
-}
-
-.featured-item h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin: 15px 0;
-}
-
-.featured-item p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.featured-item a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #ff4081; /* Instagram pink */
-    padding: 10px 20px;
-    border-radius: 30px;
-    background-color: #fff;
-    border: 2px solid #ff4081;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.featured-item a:hover {
-    background-color: #ff4081;
-    color: #fff; /* White text on hover */
-}
-
-/* Hover Effect */
-.featured-item:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Add subtle animation when the section comes into view */
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.featured-section {
-    animation: fadeInSection 1.5s ease-out;
-}
-
-/* Trending Videos Section Styling */
-.content-section {
-    background-color: #fff; /* White background for clean contrast */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.content-section h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff4081; /* Instagram pink */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.video-item {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.video-item img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 5px solid #ff4081; /* Pink border under image */
-}
-
-.video-item h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 15px 0;
-    font-weight: bold;
-}
-
-.video-item p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.video-item:hover {
-    transform: translateY(-5px); /* Slight lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-}
-
-/* Add subtle animation when the section comes into view */
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.content-section {
-    animation: fadeInSection 1.5s ease-out;
-}
-
-/* Latest News Section Styling */
-#latest-news {
-    background-color: #f9f9f9; /* Light grey background for contrast */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#latest-news h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff4081; /* Instagram pink */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.news-list {
-    list-style-type: none; /* Removes default list styles */
-    padding: 0;
-    margin: 0;
-}
-
-.news-list li {
-    background-color: #fff; /* White background for each news item */
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-list li a {
-    font-size: 1.2rem;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.news-list li a:hover {
-    color: #ff4081; /* Pink color on hover */
-    text-decoration: underline; /* Underline effect on hover */
-}
-
-.news-list li:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-}
-
-/* Add subtle animation when the section comes into view */
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#latest-news {
-    animation: fadeInSection 1.5s ease-out;
-}
-
-/* About Section Styling */
-#about {
-    background-color: #ffffff; /* Clean white background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ff4081; /* Instagram pink for consistency */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-#about p {
-    font-size: 1.2rem;
-    color: #333; /* Dark text for readability */
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 800px; /* Limits the width for better readability */
-    padding: 10px 20px;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333; /* Dark background for footer */
-    color: #fff; /* White text color for contrast */
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-footer p {
-    margin: 0;
-    font-weight: 400;
-}
-
-footer a {
-    color: #ff4081; /* Instagram pink for links */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffffff; /* Hover effect for links */
-}
-
-/* Social Links Styling */
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: #ff4081; /* Pink social link color */
-    font-size: 1.2rem;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ffffff; /* White hover color for social links */
-}
-
-/* Subtle Fade-in Animation */
-@keyframes fadeInSection {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-#about, footer {
-    animation: fadeInSection 1.5s ease-out;
 }
