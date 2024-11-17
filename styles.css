@@ -184,3 +184,86 @@ nav ul li a:hover {
     background-color: #ff4081; /* Slightly brighter red for hover effect */
     transform: translateY(-3px); /* Adds slight movement for interactivity */
 }
+#about {
+    background-color: #ffffff; /* Clean white background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff4081; /* Instagram pink for consistency */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Limits the width for better readability */
+    padding: 10px 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: #fff; /* White text color for contrast */
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+footer a {
+    color: #ff4081; /* Instagram pink for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* Hover effect for links */
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #ff4081; /* Pink social link color */
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff; /* White hover color for social links */
+}
+
+/* Subtle Fade-in Animation */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about, footer {
+    animation: fadeInSection 1.5s ease-out;
+}
+
